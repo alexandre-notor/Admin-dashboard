@@ -1,0 +1,245 @@
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+:root{
+    /* Colors  */
+    --cards:#A5B7E4;
+    --side-menu:#363740;
+    --Table-head:#E2E8F0;
+    --search-boarder:#959895;
+    --activate:#E22E1C;
+    --desactivate:#67C47E;
+    --nouveau:#4158B4;
+    --Table-boader:#EDF2F7;
+    --text:#ffffff9c;
+    --background-color:#fff;
+    --midleText:#fff;
+    --border1Calor: #4d4c4c;
+
+
+    --tran-05: all 0.5s ease;
+    --tran-03: all 0.3s ease;
+    --tran-02: all 0.2s ease;
+}
+body{
+    min-height: 100vh;
+    background-color: var(--background-color);
+   
+}
+
+body.dark{
+    --background-color:rgba(0, 0, 0, 0.557);
+    --cards:#A5B7E4;
+    --side-menu:#edeeef;
+    --Table-head:#E2E8F0;
+    --search-boarder:#959895;
+    --activate:#E22E1C;
+    --desactivate:#67C47E;
+    --nouveau:#4158B4;
+    --Table-boader:#EDF2F7;
+    --midleText:#000;
+    --text:rgba(0, 0, 0, 0.581);
+    --border1Calor: #ccc;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 14px 12px;
+    background-color: var(--side-menu);
+    transition: var(--tran-05);
+}
+
+nav.close{
+    width: 73px;
+    
+}
+
+
+nav .logo-img {
+    min-width: 200px;
+}
+
+nav .logo-img img{
+    width: 150px;
+    object-fit: cover;
+    margin-top: 12px;
+    margin-left: 12px;
+    transition: var(--tran-05);
+}
+nav.close .logo-img img {
+    width: 35px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 8px;
+    object-fit: cover;
+
+}
+
+nav .menu-items{
+    margin-top: 18px;
+    height: calc(100% - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu-items li{
+    list-style: none;
+}
+
+.menu-items li a{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    text-decoration: none;
+    position: relative;
+}
+.nav-links li a:hover:before{
+    content: "";
+    position: absolute;
+    left: -7px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: #A5B7E4;
+}
+
+.menu-items li a i{
+    font-size: 25px;
+    min-width: 45px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+}
+
+.menu-items li a .link-name{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text);
+    transition: var(--tran-05);
+
+}
+nav.close li a .link-name{
+    opacity: 0;
+    pointer-events: none;
+    
+}
+
+
+.nav-links li a:hover i,
+.nav-links li a:hover .link-name{
+    color: var(--cards);
+}
+.menu-items .parameter{
+    padding-top: 10px;
+    border-top: 1px solid var(--border1Calor);
+}
+.menu-items .mode{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.menu-items .mode-toggle{
+    position:absolute;
+    height: 50px;
+    right: 14px;
+    min-width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+} 
+.mode-toggle .switch{   
+    position: relative;
+    display: inline-block;
+    height: 22px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: var(--text);
+}
+
+.switch::before{   
+   content: "";
+   position: absolute;
+   left: 5px;
+   top: 50%;
+   transform: translateY(-50%);
+   height: 15px;
+   width: 15px;
+   background-color: #fff;
+   border-radius: 50%;
+   transition: var(--tran-03);
+}
+nav.close .mode i{
+    opacity: 0;
+    pointer-events: none;
+    
+}
+
+ul h5{
+    font-size: 17 px;
+    min-width: 25px;
+    margin-left: 12px;
+    color: var(--midleText);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 8px;
+}
+nav.close ul h5{
+    opacity: 0;
+    pointer-events: none;
+    
+}
+
+body.dark .switch::before{
+    left: 20px;
+}
+
+.dashboard{
+    position: relative;
+    left: 250px;
+    background-color: var(--background-color);
+    height: 100vh;
+    width: calc(100% - 250px);
+    padding: 20px 25px;
+    transition: var(--tran-05);
+}
+nav.close ~ .dashboard{
+    left: 73px;
+    width: calc(100% - 73px);
+}
+.dashboard .top{
+    position: fixed;
+    top: 0;
+    left: 250px;
+    display: flex;
+
+    width: calc(100% - 250px);
+    justify-content: space-between;
+    padding: 20px 25px;
+    transition: var(--tran-05);
+}
+nav.close ~ .dashboard .top{
+    left: 73px;
+    width: calc(100% - 73px);
+}
+
+.dashboard .top .sidbar-toggle{
+    width: 28px;
+    height: auto;
+    cursor: pointer;
+}

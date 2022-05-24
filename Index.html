@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin DashBoard</title>
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <nav>
+        <div class="logo-img">
+            <img class="logo" src="Img/logo.png" alt="logo " id="getImage">
+        </div>
+        <div class="menu-items">
+            <ul class="nav-links">
+                    <li><a href="#">
+                        <i class="uil uil-apps"></i>
+                        <span class="link-name">Dashboard</span>
+                    </a></li>
+            
+                <h5>Enregistrer</h5>
+                
+                <li><a href="#">
+                    <i class="uil uil-user"></i>
+
+                    <span class="link-name">Etudiants</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-bill"></i>
+                    <span class="link-name">Paiements</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-user-md"></i>
+                    <span class="link-name">Admin</span>
+                </a></li>
+                <ul class="nav-links">
+                    <li><a href="#">
+                        <i class="uil uil-schedule"></i>
+                        <span class="link-name">Planification</span>
+                    </a></li>
+                </ul>
+                <h5>Bordereaux</h5>
+            
+                <li><a href="#">
+                    <i class="uil uil-message"></i>
+                    <span class="link-name">Envoyés</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-image-check"></i>
+                    <span class="link-name">Valider</span>
+                </a></li>
+
+                <h5>Rapport</h5>
+
+                <li><a href="#">
+                    <i class="uil uil-folder"></i>
+                    <span class="link-name">Promotion</span>
+                </a></li>
+
+
+                <li><a href="#">
+                    <i class="uil uil-file"></i>
+                    <span class="link-name">Départements</span>
+                </a></li>
+            </ul>
+            <ul class="parameter">
+                <h5>Rarametre</h5>
+
+                <li><a href="#">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Déconnection</span>
+                </a></li>
+
+
+                <li><a href="#">
+                    <i class="uil uil-key-skeleton"></i>
+                    <span class="link-name">Mot de pass</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                    <i class="uil uil-moon"></i>
+                    <span class="link-name">Mode nuit</span>
+                </a>
+                <div class="mode-toggle">
+                    <span class="switch" onclick="logoChange()"></span>
+                </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="dashboard">
+        <div class="top">
+            <img src="Img/hmenu.svg" alt="humboger menu" class="sidbar-toggle" onclick="logoChange1()">
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="search here.....">
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
